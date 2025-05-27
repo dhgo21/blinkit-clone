@@ -5,18 +5,16 @@ import HomeBottomProducts from './HomeBottomproducts'
 import { LuClock2 } from "react-icons/lu";
 import { FaAngleRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa";
+import RollPaptob from './RollPaptob';
+import Snacks from './Snacks';
 function Home() {
-  const scrollref=useRef(null)
+  const scrollref1=useRef(null)
+  const scrollref2=useRef(null)
+  const scrollref3=useRef(null)
 
-  function handlescrollright() {
-  if (scrollref.current) {
-    scrollref.current.scrollLeft += 1100; // jitna px scroll karwana ho
-  }
-  }
-
-  function handlescrollleft() {
-  if (scrollref.current) {
-    scrollref.current.scrollLeft -= 1100;
+  function handlescroll(ref, direction, amount = 1100) {
+  if (ref.current) {
+    ref.current.scrollLeft += direction === 'right' ? amount : -amount;
   }
 }
   return (
@@ -42,8 +40,11 @@ function Home() {
         }
       </div>
       <div className="home-bottom-products">
-        <h2>Dairy, Bread & Eggs</h2>
-        <div className="items" ref={scrollref}>
+        <div className="head">
+          <h2>Dairy, Bread & Eggs</h2>
+          <h4 style={{cursor:"pointer",color:"green"}}>See all</h4>
+        </div>
+        <div className="items" ref={scrollref1}>
           {
             HomeBottomProducts.map((curr)=>{
               return (
@@ -69,10 +70,88 @@ function Home() {
             })
           }
         </div>
-        <div className="arrow1" onClick={handlescrollleft}>
+        <div className="arrow1" onClick={() => handlescroll(scrollref1, 'left')}>
           <FaChevronLeft />
         </div>
-        <div className="arrow" onClick={handlescrollright}>
+        <div className="arrow" onClick={() => handlescroll(scrollref1, 'right')}>
+          <FaAngleRight />
+        </div>
+      </div>
+      
+      <div className="roll-pap-tob">
+        <div className="head">
+          <h2>Rolling paper & tobacco</h2>
+          <h4 style={{cursor:"pointer",color:"green"}}>See all</h4>
+        </div>
+        <div className="items" ref={scrollref2}>
+          {
+            RollPaptob.map((curr)=>{
+              return (
+                <>
+                <div className="box">
+                  <div className="item-photo">
+                    <div className="item-image">
+                      <img id="img"src={curr.image}></img>
+                    </div>
+                  </div>
+                  <div className="stuffs">
+                    <p id="clock-time"><LuClock2 />8 MINS</p>
+                    <p id="curr-title">{curr.title}</p>
+                    <p id="curr-weight">{curr.weight}</p>
+                    <div className="price-bttn">
+                      <p id="curr-price">₹{curr.price}</p>
+                      <button id="add-bttn">ADD</button>
+                    </div>
+                  </div>
+                </div>
+                </>
+              )
+            })
+          }
+        </div>
+        <div className="arrow1" onClick={() => handlescroll(scrollref2, 'left')}>
+          <FaChevronLeft />
+        </div>
+        <div className="arrow"onClick={() => handlescroll(scrollref2, 'right')}>
+          <FaAngleRight />
+        </div>
+      </div>
+
+      <div className="snacks">
+        <div className="head">
+          <h2>Snacks & Munchies</h2>
+          <h4 style={{cursor:"pointer",color:"green"}}>See all</h4>
+        </div>
+        <div className="items" ref={scrollref3}>
+          {
+            Snacks.map((curr)=>{
+              return (
+                <>
+                <div className="box">
+                  <div className="item-photo">
+                    <div className="item-image">
+                      <img id="img"src={curr.image}></img>
+                    </div>
+                  </div>
+                  <div className="stuffs">
+                    <p id="clock-time"><LuClock2 />8 MINS</p>
+                    <p id="curr-title">{curr.title}</p>
+                    <p id="curr-weight">{curr.weight}</p>
+                    <div className="price-bttn">
+                      <p id="curr-price">₹{curr.price}</p>
+                      <button id="add-bttn">ADD</button>
+                    </div>
+                  </div>
+                </div>
+                </>
+              )
+            })
+          }
+        </div>
+        <div className="arrow1" onClick={() => handlescroll(scrollref3, 'left')}>
+          <FaChevronLeft />
+        </div>
+        <div className="arrow"onClick={() => handlescroll(scrollref3 , 'right')}>
           <FaAngleRight />
         </div>
       </div>

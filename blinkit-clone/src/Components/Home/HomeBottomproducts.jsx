@@ -83,5 +83,33 @@ const HomeBottomProducts=[
         price:38,
         image:"/images/home-bottom-products/pavv.webp"
     },
+    {
+        id:13,
+        title:"Amul Mango Shrikhand",
+        weight:"100 g",
+        price:28,
+        image:"/images/home-bottom-products/amul-shrikhand.webp"
+    },
+    {
+        id:14,
+        title:"Harvest Gold Sweet Bun",
+        weight:"150 g",
+        price:20,
+        image:"/images/home-bottom-products/bun.webp"
+    },
+    {
+        id:15,
+        title:"Amul Salted Butter (Chiplets)",
+        weight:"10 units",
+        price:70,
+        image:"/images/home-bottom-products/butter.webp"
+    },
+    {
+        id:16,
+        title:"Epigamia Blueberry Yogurt",
+        weight:"85 g",
+        price:60,
+        image:"/images/home-bottom-products/yog.webp"
+    },
 ]
 export default HomeBottomProducts
