@@ -7,16 +7,29 @@ import { FaAngleRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa";
 import RollPaptob from './RollPaptob';
 import Snacks from './Snacks';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../Redux/Store';
+
 function Home() {
   const scrollref1=useRef(null)
   const scrollref2=useRef(null)
   const scrollref3=useRef(null)
-
-  function handlescroll(ref, direction, amount = 1100) {
-  if (ref.current) {
-    ref.current.scrollLeft += direction === 'right' ? amount : -amount;
+  const dispatch=useDispatch()
+  
+  function handlescroll(ref, direction, amount = 1100)
+  {
+    if (ref.current)
+    {
+      ref.current.scrollLeft += direction === 'right' ? amount : -amount;
+    }
   }
-}
+
+  function handleadd(curr)
+  {
+    dispatch(addToCart(curr))
+    // console.log(curr)
+  }
+  
   return (
     <>
     <div className="home">
@@ -61,7 +74,7 @@ function Home() {
                     <p id="curr-weight">{curr.weight}</p>
                     <div className="price-bttn">
                       <p id="curr-price">₹{curr.price}</p>
-                      <button id="add-bttn">ADD</button>
+                      <button id="add-bttn" onClick={()=>handleadd(curr)}>ADD</button>
                     </div>
                   </div>
                 </div>
@@ -156,6 +169,7 @@ function Home() {
         </div>
       </div>
     </div>
+    
     </>
   )
 }

@@ -1,0 +1,93 @@
+.upper{
+    /* border: 2px solid purple; */
+    margin: 100px 120px 20px 120px;
+}
+.footer{
+    /* border: 2px solid blue; */
+    
+    display: flex;
+    justify-content: space-between;
+}
+.div1{
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+    width: 30%;
+}
+.div2{
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+.top{
+    /* border: 2px solid orange; */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bottomm{
+    display: flex;
+    /* border: 2px solid cyan; */
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.bottomm2{
+    display: flex;
+    /* border: 2px solid cyan; */
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.l{
+    /* border: 2px solid pink; */
+    list-style: none;
+    font-size: 17px;
+    padding-top: 10px;
+}
+.l li{
+    margin-bottom: 10px;
+    color: rgb(159, 159, 159);
+    cursor: pointer;
+}
+.lower{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+.patent{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(159, 159, 159);
+}
+.downloadapp{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 33%;
+    color: rgb(129, 129, 129);
+    font-weight: bold;
+}
+.stores{
+    width: 130px;
+    cursor: pointer;
+}
+.social{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    width: 20%;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.lastlines{
+    margin-top: 40px;
+    color: rgb(159, 159, 159);
+}

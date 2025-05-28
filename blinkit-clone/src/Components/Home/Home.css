@@ -1,6 +1,9 @@
 .home{
     /* border: 2px solid red; */
     margin: 20px 120px;
+    z-index: 1;
+    margin-top: 70px;
+    /* position: relative; */
 }
 .top-img{
     /* border: 2px solid yellow; */
@@ -61,6 +64,8 @@
     margin-right: 20px;
     /* margin-bottom: 20px; */
     scroll-snap-align: start;
+    z-index: 0;
+    /* cursor: pointer; */
 }
 .item-photo{
     align-items: center;
@@ -81,7 +86,7 @@
     display: flex;
     font-size: 10px;
     background-color: rgb(243, 243, 243);
-    width: 33%;
+    width: 26%;
     padding: 5px;
     border-radius: 10px;
     font-weight: bold;
