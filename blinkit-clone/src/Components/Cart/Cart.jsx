@@ -2,13 +2,33 @@ import React from 'react'
 import "./Cart.css"
 import { RxCross2 } from "react-icons/rx";
 import { TbStopwatch } from "react-icons/tb";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
 import { Link } from 'react-router';
+import { FaChevronRight } from "react-icons/fa";
+import { CgNotes } from "react-icons/cg";
+import { MdDeliveryDining } from "react-icons/md";
+import { IoBag } from "react-icons/io5";
+import { decreQty, increQty } from '../Redux/Store';
 function Cart({setaddtocart}) {
 
   const cartproducts = useSelector(state => state.slice.cartitems)
-  // const dispatch=useDispatch()
+  const dispatch=useDispatch()
+
+  const total = cartproducts.reduce((total, item) => {
+    return Math.round(total + item.price * item.quantity)
+  }, 0)
+
+  function handleincreqty(item)
+  {
+    dispatch(increQty(item))
+  }
+
+  function handledecreqty(item)
+  {
+    dispatch(decreQty(item))
+  }
+  const gtotal=total+10
 
   return (
     <>
@@ -27,6 +47,7 @@ function Cart({setaddtocart}) {
                 <Link to="/home"><button id="browse-pro" onClick={()=>setaddtocart(false)}>Browse Products</button></Link>
               </div>
             ) : (
+              <>
               <div className="cartlen">
                 <div className="clocktimining">
                   <TbStopwatch id="clockicon"/>
@@ -57,9 +78,9 @@ function Cart({setaddtocart}) {
                           </div>
                           <div className="proqtydetail">
                             <div className="qtydetails">
-                              <button className='bttns'>-</button>
+                              <button className='bttns' onClick={()=>handledecreqty(curr)}>-</button>
                               <input id="qtyfield" type='number' value={curr.quantity}readOnly></input>
-                              <button className='bttns'>+</button>
+                              <button className='bttns' onClick={()=>handleincreqty(curr)}>+</button>
                             </div>
                           </div>
                         </div>
@@ -68,11 +89,64 @@ function Cart({setaddtocart}) {
                     })
                   }
                 </div>
+                <div className="totalbill">
+                  <div className="bill-details">Bill details</div>
+                  <div className="stuffssss">
+                    <div className="sub-total">
+                      <div className="chargessss">
+                        <div className="icon-text">
+                        <CgNotes className='del-logo'/> Sub Total
+                      </div>
+                        <div className="icon-text">
+                          <MdDeliveryDining className='del-logo'/> Delivery charge
+                        </div>
+                        <div className="icon-text">
+                        <IoBag className='del-logo'/> Handling charge
+                      </div>
+                      </div>
+                      <div className="handle-charge">
+                      <div className="st">
+                        ₹{total}
+                      </div>
+                      <div className="st">
+                        ₹5
+                      </div>
+                      <div className="st">
+                        ₹5
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div className="bill-detailsss">
+                    <div className="gt">
+                      Grand total
+                    </div>
+                    <div className="gtotal">
+                      ₹{gtotal}
+                    </div>
+                  </div>
+                </div>
+                <div className="call-pol">
+                  <p id="cal-pol">Cancellation Policy</p>
+                  <p id="cal-del">Orders cannot be cancelled once packed for delivery. In case of unexpected delays, a refund will be provided, if applicable.</p>
+                </div>
               </div>
+              <div className="carttotal">
+                <div className="total">
+                  <p id="total">₹{gtotal}</p>
+                  <p id="totaltext">TOTAL</p>
+                </div>
+                <div className="proceed">
+                  <div className="p">Proceed</div>
+                  <div className="arr"><FaChevronRight /></div>
+                </div>
+              </div>
+              </>
             )
           }
         </div>
       </div>
+
     </div>
     </>
   )

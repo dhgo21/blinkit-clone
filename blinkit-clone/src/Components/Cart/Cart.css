@@ -3,12 +3,12 @@
     position: absolute;
     position: fixed;
     /* transform: translate(1096px); */
-    transform: translate(1121px);
+    transform: translate(1102px);
     top: 0px;
-    min-width: 350px;
+    max-width: 370px;
     height: 99.5%;
     z-index: 17;
-    background-color: white;
+    background-color: rgb(245, 247, 248);
     box-shadow: -12px 20px 3230px black;
     padding: 20px;
 }
@@ -19,12 +19,14 @@
     align-items: center;
     justify-content: center;
     justify-content: space-between;
-    padding: 10px 0px 10px 0px;
+    padding: 10px;
     background-color: white;
     margin-bottom: 30px;
+    border-radius: 10px;
 }
 .cartheading{
     margin: 0px;
+    /* border: 2px solid black; */
 }
 #crosss{
     font-size: 20px;
@@ -64,13 +66,20 @@
     /* padding: 10px; */
     /* justify-content: center; */
     align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
 }
 #clockicon{
     font-size: 35px;
     margin-right: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
 }
 .deltime{
     /* border: 2px solid red; */
+    /* background-color: white; */
 }
 .topdiv{
     /* font-size: 15px; */
@@ -83,16 +92,21 @@
 }
 .cartlen{
     /* border: 2px solid green; */
+    overflow: auto;
+    height: calc(175px * 3);
 }
 .cart-products{
     /* border: 2px solid red; */
-    overflow: auto;
-    height: calc(160px * 3);
+    
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    margin-top: 30px;
 }
 .pro{
     /* border: 2px solid blue; */
     display: flex;
-    margin-top: 30px;
+    
     margin-bottom: 10px;
     justify-content: space-between;
 }
@@ -101,14 +115,17 @@
     /* border: 2px solid green; */
 }
 .proimagediv{
-    /* border: 2px solid brown; */
+    border: 2px solid rgb(245, 244, 244);
+    border-radius: 10px;
 }
 #proimage{
     width: 90px;
+    border-radius: 10px;
 }
 .prodetailsdiv{
     /* border: 2px solid orange; */
-    max-width: 183px;
+    max-width: 160px;
+    padding-left: 14px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,7 +160,7 @@
     border-radius: 7px;
 }
 #qtyfield{
-    width: 20px;
+    width: 25px;
     border: none;
     background-color: green;
     outline: none;
@@ -152,6 +169,7 @@
     text-align: center;
     /* padding: 0; */
     padding-left: 10px;
+    align-items: center;
 }
 .bttns{
     border: none;
@@ -162,4 +180,127 @@
     font-size: 15px;
     align-items: center;
     text-align: center;
+    cursor: pointer;
+}
+.carttotal{
+    background-color: green;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    max-width: 94%;
+    border-radius: 10px;
+}
+.total{
+    /* border: 2px solid yellow; */
+    color: white;
+}
+.proceed{
+    /* border: 2px solid red; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    cursor: pointer;
+}
+#total{
+    margin: 0px;
+    margin-bottom: 5px;
+}
+#totaltext{
+    margin: 0px;
+    font-size: 10px;
+    color: rgb(218, 217, 217);
+}
+.arr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.totalbill{
+    /* border: 2px solid red; */
+    padding: 10px;
+    background-color: rgb(255, 252, 252);
+    border-radius: 10px;
+    width: 91%;
+}
+.bill-details{
+    /* border: 2px solid cyan; */
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+.stuffssss{
+    /* border: 2px solid blue; */
+    display: flex;
+}
+.sub-total{
+    /* border: 2px solid yellow; */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.icon-text{
+    display: flex;
+    /* border: 2px solid green; */
+    width: 140px;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* justify-content: center; */
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: rgb(71, 71, 71);
+    /* font-weight: BOLD; */
+}
+.handle-charge{
+    /* border: 2px solid orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    /* margin-bottom: px; */
+}
+.del-logo{
+    margin-right: 7px;
+    font-size: 13px;
+    color: black;
+}
+.bill-detailsss{
+    /* border: 2px solid brown; */
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.gt{
+    /* border: 2px solid purple; */
+    font-weight: bold;
+}
+.gtotal{
+    /* border: 2px solid rgb(243, 243, 16); */
+    font-weight: bold;
+}
+.st{
+    /* border: 2px solid black; */
+    margin-bottom: 4px;
+}
+.call-pol{
+    /* border: 2px solid blue; */
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 91%;
+}
+#cal-pol{
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+#cal-del{
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    color: rgb(101, 101, 101);
 }

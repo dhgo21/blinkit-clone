@@ -22,10 +22,32 @@ const slice=createSlice({
                 alert("Added to Cart")
             }
         },
+        increQty(state,action)
+        {
+            const exist=state.cartitems.findIndex(curr=>curr.id===action.payload.id)
+            if(exist>=0)
+            {
+                state.cartitems[exist].quantity += 1;
+            }
+        },
+        decreQty(state,action)
+        {
+            const exist=state.cartitems.findIndex(curr=>curr.id===action.payload.id)
+            if(exist>=0)
+            {
+                if(state.cartitems[exist].quantity>1)
+                {
+                    state.cartitems[exist].quantity -= 1;
+                }
+                else{
+                    alert("min reached")
+                }
+            }
+        }
     }
 })
 
-export const {addToCart}=slice.actions
+export const {addToCart,increQty,decreQty}=slice.actions
 
 
 export const store=configureStore({

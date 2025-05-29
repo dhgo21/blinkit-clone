@@ -113,7 +113,7 @@ function Home() {
                     <p id="curr-weight">{curr.weight}</p>
                     <div className="price-bttn">
                       <p id="curr-price">₹{curr.price}</p>
-                      <button id="add-bttn">ADD</button>
+                      <button id="add-bttn" onClick={()=>handleadd(curr)}>ADD</button>
                     </div>
                   </div>
                 </div>
@@ -152,7 +152,7 @@ function Home() {
                     <p id="curr-weight">{curr.weight}</p>
                     <div className="price-bttn">
                       <p id="curr-price">₹{curr.price}</p>
-                      <button id="add-bttn">ADD</button>
+                      <button id="add-bttn" onClick={()=>handleadd(curr)}>ADD</button>
                     </div>
                   </div>
                 </div>

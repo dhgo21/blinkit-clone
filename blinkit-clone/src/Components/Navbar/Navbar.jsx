@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./Navbar.css"
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { IoSearchOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { CiLogin } from "react-icons/ci";
@@ -21,11 +21,26 @@ function Navbar() {
   {
     setaddtocart(true)
   }
+//   useEffect(() => {
+//   if (addtocart) {
+//     document.body.classList.add("blur-bg");
+//   } else {
+//     document.body.classList.remove("blur-bg");
+//   }
+// }, [addtocart]);
   return (
     <>
     {
       addtocart ? <Cart addtocart={addtocart} setaddtocart={setaddtocart}/> : ""
     }
+    {/* {
+      addtocart && (
+        <>
+          <div className="overlay" onClick={() => setaddtocart(false)}></div>
+          <Cart addtocart={addtocart} setaddtocart={setaddtocart} />
+        </>
+      )
+    } */}
     <div className="navbar">
       <div className="logo">
         <img id="nav-logo" src="/images/logo.webp"></img>
@@ -50,7 +65,7 @@ function Navbar() {
       }
       <div className="cartbttn">
         <Link to="/cart">
-          <div id='cbttn' onClick={handleaddtocart}><IoCartOutline id="cartttt"/>Cart <div id="cartlength">{cartitems.length}</div></div>
+          <button id='cbttn' onClick={handleaddtocart}><IoCartOutline id="cartttt"/>Cart <span id="cartlength">{cartitems.length}</span></button>
         </Link>
       </div>
     </div>
