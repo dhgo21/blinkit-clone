@@ -13,6 +13,7 @@ import { decreQty, increQty } from '../Redux/Store';
 function Cart({setaddtocart}) {
 
   const cartproducts = useSelector(state => state.slice.cartitems)
+  
   const dispatch=useDispatch()
 
   const total = cartproducts.reduce((total, item) => {

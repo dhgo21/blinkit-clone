@@ -1,12 +1,16 @@
 .home{
     /* border: 2px solid red; */
-    margin: 20px 120px;
     z-index: 1;
-    margin-top: 70px;
-    /* position: relative; */
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 75px;
+    width: 100%;
+    position: relative;
+    /* m-width: 99%; */
 }
 .top-img{
     /* border: 2px solid yellow; */
+    /* max-width: 90%; */
 }
 #home-img-1{
     width: 100%;
@@ -16,7 +20,7 @@
     display: flex;
     /* border: 2px solid blue; */
     padding: 20px;
-    width: 84%;
+    max-width: 89%;
     justify-content: space-between;
 }
 .mid-images{
@@ -24,13 +28,13 @@
     cursor: pointer;
 }
 .bottom-banner-imgs{
-    /* border: 2px solid blue; */
+    /* border: 2px solid blue;  */
     display: grid;
-    grid-template-rows: 180px 180px;
-    grid-template-columns: 127px 127px 127px 127px 127px 127px 127px 127px 127px 122px;
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 122px 122px 122px 122px 122px 122px 122px 122px 120px 120px;
 }
 .bottom-images{
-    width: 120px;
+    width: 100px;
     cursor: pointer;
 }
 .home-bottom-products{
@@ -48,6 +52,7 @@
     /* flex-wrap: wrap; */
     justify-content: space-between;
     /* border: 2px solid green; */
+    /* padding: 0px 10px; */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
@@ -118,34 +123,29 @@
     font-weight: bold;
     cursor: pointer;
 }
-.arrow{
+.arrow,
+.arrow1 {
     background-color: rgb(232, 232, 232);
-    width: 1.5%;
+    width: 40px;
+    height: 40px;
     border-radius: 10px;
-    padding: 10px;
     display: flex;
     align-items: center;
-    position: absolute;
     justify-content: center;
-    /* transform: translateX(1250px); */
-    right: 80px;
-    transform: translateY(-170px);
+    position: absolute;
     cursor: pointer;
     border: 1px solid lightgray;
+    transform: translateY(-410%);
+    z-index: 192;
+    
 }
-.arrow1{
-    background-color: rgb(232, 232, 232);
-    width: 1.5%;
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    justify-content: center;
-    left: 80px;
-    transform: translateY(-170px);
-    cursor: pointer;
-    border: 1px solid lightgray;
+
+.arrow {
+    right: -18px;
+}
+
+.arrow1 {
+    left: -18px;
 }
 .roll-pap-tob{
     /* border: 2px solid yellow; */

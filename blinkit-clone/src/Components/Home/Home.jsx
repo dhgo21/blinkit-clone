@@ -8,14 +8,16 @@ import { FaChevronLeft } from "react-icons/fa";
 import RollPaptob from './RollPaptob';
 import Snacks from './Snacks';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../Redux/Store';
+import { addToCart, orderDetails } from '../Redux/Store';
+import Footer from '../Footer/Footer';
+import { useNavigate } from 'react-router';
 
 function Home() {
   const scrollref1=useRef(null)
   const scrollref2=useRef(null)
   const scrollref3=useRef(null)
   const dispatch=useDispatch()
-  
+  const navigate=useNavigate()
   function handlescroll(ref, direction, amount = 1100)
   {
     if (ref.current)
@@ -27,7 +29,12 @@ function Home() {
   function handleadd(curr)
   {
     dispatch(addToCart(curr))
-    // console.log(curr)
+  }
+
+  function handleorderdetails(item)
+  {
+    dispatch(orderDetails([item]))
+    navigate("/orderdetails")
   }
   
   return (
@@ -65,7 +72,7 @@ function Home() {
                 <div className="box">
                   <div className="item-photo">
                     <div className="item-image">
-                      <img id="img"src={curr.image}></img>
+                      <img id="img"src={curr.image} onClick={()=>handleorderdetails(curr)}></img>
                     </div>
                   </div>
                   <div className="stuffs">
@@ -101,10 +108,10 @@ function Home() {
             RollPaptob.map((curr)=>{
               return (
                 <>
-                <div className="box">
+                <div className="box" >
                   <div className="item-photo">
                     <div className="item-image">
-                      <img id="img"src={curr.image}></img>
+                      <img id="img"src={curr.image} onClick={()=>handleorderdetails(curr)}></img>
                     </div>
                   </div>
                   <div className="stuffs">
@@ -143,7 +150,7 @@ function Home() {
                 <div className="box">
                   <div className="item-photo">
                     <div className="item-image">
-                      <img id="img"src={curr.image}></img>
+                      <img id="img"src={curr.image} onClick={()=>handleorderdetails(curr)}></img>
                     </div>
                   </div>
                   <div className="stuffs">
@@ -169,7 +176,7 @@ function Home() {
         </div>
       </div>
     </div>
-    
+    <Footer />
     </>
   )
 }

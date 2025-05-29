@@ -1,0 +1,17 @@
+.orderdetails{
+    z-index: 1;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 75px;
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+}
+.leftpart{
+    border: 2px solid blue;
+    padding: 10px;
+}
+.rightpart{
+    border: 2px solid green;
+    padding: 10px;
+}

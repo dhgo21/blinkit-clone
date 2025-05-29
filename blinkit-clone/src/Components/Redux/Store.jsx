@@ -3,6 +3,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const initialState={
     cartitems:[],
+    orderd:[]
 }
 
 const slice=createSlice({
@@ -40,14 +41,18 @@ const slice=createSlice({
                     state.cartitems[exist].quantity -= 1;
                 }
                 else{
-                    alert("min reached")
+                    state.cartitems = state.cartitems.filter(
+                    (item) => item.id !== action.payload.id);
                 }
             }
-        }
+        },
+        orderDetails(state, action){
+            state.orderd = action.payload;
+        },
     }
 })
 
-export const {addToCart,increQty,decreQty}=slice.actions
+export const {addToCart,increQty,decreQty,orderDetails}=slice.actions
 
 
 export const store=configureStore({

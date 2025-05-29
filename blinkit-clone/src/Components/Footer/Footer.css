@@ -1,6 +1,10 @@
 .upper{
     /* border: 2px solid purple; */
     margin: 100px 120px 20px 120px;
+    z-index: 1;
+    margin: 0 auto;
+    max-width: 1200px;
+
 }
 .footer{
     /* border: 2px solid blue; */
