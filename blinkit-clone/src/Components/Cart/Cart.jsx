@@ -45,7 +45,7 @@ function Cart({setAddToCart}) {
               <div className="emptycart">
                 <h2>Oops! Cart is Empty!</h2>
                 <MdOutlineRemoveShoppingCart id="emptycartlogo"/>
-                <Link to="/home"><button id="browse-pro" onClick={()=>setAddToCart(false)}>Browse Products</button></Link>
+                <Link to="/"><button id="browse-pro" onClick={()=>setAddToCart(false)}>Browse Products</button></Link>
               </div>
             ) : (
               <>

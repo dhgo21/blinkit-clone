@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Orderdetails.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { LuClock2 } from "react-icons/lu"
 import { addToCart } from '../Redux/Store'
+import Footer from '../Footer/Footer'
 
 function Orderdetails() {
     const orderdetails = useSelector(state => state.slice.orderd)
@@ -12,7 +13,12 @@ function Orderdetails() {
         dispatch(addToCart(item))
     }
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
+        <>
         <div className="orderdetails">
             <div className="leftpart">
                 {orderdetails.map((curr, index) => (
@@ -82,6 +88,8 @@ function Orderdetails() {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     )
 }
 

@@ -29,7 +29,7 @@ function Navbar() {
     }
     <div className="navbar">
       <div className="logo">
-        <img id="nav-logo" src="/images/logo.webp"></img>
+        <Link to="/"><img id="nav-logo" src="/images/logo.webp"></img></Link>
       </div>
       <div className="delivery">
         <h3 id="delv-head">Delivery in 8 minutes</h3>
@@ -50,9 +50,7 @@ function Navbar() {
       </div>
       }
       <div className="cartbttn">
-        <Link>
           <button id='cbttn' onClick={handleaddtocart}><IoCartOutline id="cartttt"/>Cart <span id="cartlength">{cartitems.length}</span></button>
-        </Link>
       </div>
     </div>
     {

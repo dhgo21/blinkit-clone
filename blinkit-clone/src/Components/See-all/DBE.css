@@ -1,0 +1,108 @@
+.dbe{
+    z-index: 1;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 75px;
+    width: 100%;
+    /* border: 2px solid red; */
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.dbe-head{
+    border: 1px solid rgb(234, 233, 233);
+    padding: 8px;
+    font-weight: bold;
+}
+.dbe-products{
+    /* border: 2px solid orange; */
+    border-right: 1px solid rgb(234, 233, 233);
+    border-bottom: 1px solid rgb(234, 233, 233);
+    border-left: 1px solid rgb(234, 233, 233);
+    padding: 8px 0px 8px 8px;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    height: calc(185px * 3);
+    flex-wrap: wrap;
+}
+.dbe-box{
+    border: 2px solid rgb(234, 233, 233);
+    border-radius: 10px;
+    min-width: 14%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 7px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.item-photo2{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* border: 2px solid red; */
+}
+.item-image2{
+    /* border: 2px solid green; */
+}
+#img2{
+    width: 120px;
+    cursor: pointer;
+}
+.stuffs2{
+    /* border: 2px solid blue; */
+    display: flex;
+    /* max-height: 160px; */
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    justify-content: center;
+}
+#clock-time2{
+    display: flex;
+    font-size: 10px;
+    background-color: rgb(243, 243, 243);
+    max-width: 50px;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    justify-content: space-between;
+    /* border: 2px solid yellow; */
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+#curr-title2{
+    font-size: 13px;
+    font-weight: bold;
+    /* border: 2px solid yellow; */
+    max-width: 160px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#curr-weight2{
+    font-size: 13px;
+    color: rgb(126, 126, 126);
+    /* border: 2px solid yellow; */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.price-bttn2{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    align-items: center;
+}
+#curr-price2{
+    font-size: 13px;
+    font-weight: bold;
+    /* border: 2px solid yellow; */
+}
+#add-bttn2{
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid green;
+    color: green;
+    font-weight: bold;
+    cursor: pointer;
+}

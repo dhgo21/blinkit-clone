@@ -25,14 +25,14 @@ const HomeBottomProducts=[
         title:"Amul Taaza Toned Milk",
         weight:"500 ml",
         price:27,
-        image:"/images/home-bottom-products/amul-taza-toned.webp"  
+        image:"/images/home-bottom-products/amul-taza-toned.webp",
     },
     {
         id:5,
         title:"Amul Gold Full Cream Milk",
         weight:"500 ml",
         price:34,
-        image:"/images/home-bottom-products/amul-gold.webp"
+        image:"/images/home-bottom-products/amul-gold.webp",
     },
     {
         id:6,
@@ -110,6 +110,20 @@ const HomeBottomProducts=[
         weight:"85 g",
         price:60,
         image:"/images/home-bottom-products/yog.webp"
+    },
+    {
+        id:17,
+        title:"Yakult Probiotic Drink",
+        weight:"5 x 65 ml",
+        price:90,
+        image:"/images/home-bottom-products/yakul.webp"
+    },
+    {
+        id:18,
+        title:"FruBon White Desi Butter (Ghar ka Swaad)",
+        weight:"100 g",
+        price:65,
+        image:"/images/home-bottom-products/desi.webp"
     },
 ]
 export default HomeBottomProducts

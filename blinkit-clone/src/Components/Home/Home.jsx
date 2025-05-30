@@ -10,7 +10,7 @@ import Snacks from './Snacks';
 import { useDispatch } from 'react-redux';
 import { addToCart, orderDetails } from '../Redux/Store';
 import Footer from '../Footer/Footer';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 function Home() {
   const scrollref1=useRef(null)
@@ -62,7 +62,7 @@ function Home() {
       <div className="home-bottom-products">
         <div className="head">
           <h2>Dairy, Bread & Eggs</h2>
-          <h4 style={{cursor:"pointer",color:"green"}}>See all</h4>
+          <Link to="/dairy-bread-eggs"><button className="sellall-bttn">See all</button></Link>
         </div>
         <div className="items" ref={scrollref1}>
           {
@@ -101,7 +101,7 @@ function Home() {
       <div className="roll-pap-tob">
         <div className="head">
           <h2>Rolling paper & tobacco</h2>
-          <h4 style={{cursor:"pointer",color:"green"}}>See all</h4>
+          <Link to="/roll-paper-tob"><button className="sellall-bttn">See all</button></Link>
         </div>
         <div className="items" ref={scrollref2}>
           {
@@ -140,7 +140,7 @@ function Home() {
       <div className="snacks">
         <div className="head">
           <h2>Snacks & Munchies</h2>
-          <h4 style={{cursor:"pointer",color:"green"}}>See all</h4>
+          <Link to="/Snacks-munchies"><button className="sellall-bttn">See all</button></Link>
         </div>
         <div className="items" ref={scrollref3}>
           {

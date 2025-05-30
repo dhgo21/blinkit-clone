@@ -7,10 +7,20 @@
     width: 100%;
     position: relative;
     /* m-width: 99%; */
+    scroll-behavior: smooth;
 }
 .top-img{
     /* border: 2px solid yellow; */
-    /* max-width: 90%; */
+}
+.sellall-bttn{
+    cursor:pointer;
+    color:green;
+    border:none;
+    outline:none;
+    background-color:white;
+    font-weight:bold;
+    padding:0px;
+    font-size:17px;
 }
 #home-img-1{
     width: 100%;
@@ -71,6 +81,7 @@
     scroll-snap-align: start;
     z-index: 0;
     /* cursor: pointer; */
+    justify-content: space-between;
 }
 .item-photo{
     align-items: center;
@@ -135,7 +146,7 @@
     position: absolute;
     cursor: pointer;
     border: 1px solid lightgray;
-    transform: translateY(-410%);
+    transform: translateY(-650%);
     z-index: 192;
     
 }
