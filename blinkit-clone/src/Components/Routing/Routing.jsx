@@ -9,8 +9,8 @@ function Routing() {
     <>
     <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/cart" element={<Cart />}/>
-        <Route path="/orderdetails" element={<Orderdetails />}/>
+        {/* <Route path="/cart" element={<Cart />}/> */}
+        <Route path="/orderdetails" element={<Orderdetails/>}/>
     </Routes>
     </>
   )

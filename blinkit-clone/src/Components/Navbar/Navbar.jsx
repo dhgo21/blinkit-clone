@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 function Navbar() {
   const { loginWithRedirect , isAuthenticated, user , logout } = useAuth0();
   const [userd,setuserd]=useState(false)
-  const [addtocart,setaddtocart]=useState(false)
+  const [addToCart, setAddToCart] = useState(false)
   const cartitems=useSelector((state)=>state.slice.cartitems)
   function handleuserd()
   {
@@ -19,13 +19,13 @@ function Navbar() {
   }
   function handleaddtocart()
   {
-    setaddtocart(true)
+    setAddToCart(true)
   }
 
   return (
     <>
     {
-      addtocart ? <Cart addtocart={addtocart} setaddtocart={setaddtocart}/> : ""
+      addToCart ? <Cart setAddToCart={setAddToCart} /> : ""
     }
     <div className="navbar">
       <div className="logo">
@@ -50,7 +50,7 @@ function Navbar() {
       </div>
       }
       <div className="cartbttn">
-        <Link to="/cart">
+        <Link>
           <button id='cbttn' onClick={handleaddtocart}><IoCartOutline id="cartttt"/>Cart <span id="cartlength">{cartitems.length}</span></button>
         </Link>
       </div>

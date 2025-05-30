@@ -4,13 +4,13 @@ import { RxCross2 } from "react-icons/rx";
 import { TbStopwatch } from "react-icons/tb";
 import { useDispatch, useSelector } from 'react-redux';
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { FaChevronRight } from "react-icons/fa";
 import { CgNotes } from "react-icons/cg";
 import { MdDeliveryDining } from "react-icons/md";
 import { IoBag } from "react-icons/io5";
 import { decreQty, increQty } from '../Redux/Store';
-function Cart({setaddtocart}) {
+function Cart({setAddToCart}) {
 
   const cartproducts = useSelector(state => state.slice.cartitems)
   
@@ -36,7 +36,7 @@ function Cart({setaddtocart}) {
     <div className="cart">
       <div className="cart-head">
         <h4 className='cartheading'>My Cart</h4>
-        <RxCross2 id="crosss" onClick={()=>setaddtocart(false)}/>
+        <RxCross2 id="crosss" onClick={()=>setAddToCart(false)}/>
       </div>
       <div className="cartitems">
         <div className="cartproducts">
@@ -45,7 +45,7 @@ function Cart({setaddtocart}) {
               <div className="emptycart">
                 <h2>Oops! Cart is Empty!</h2>
                 <MdOutlineRemoveShoppingCart id="emptycartlogo"/>
-                <Link to="/home"><button id="browse-pro" onClick={()=>setaddtocart(false)}>Browse Products</button></Link>
+                <Link to="/home"><button id="browse-pro" onClick={()=>setAddToCart(false)}>Browse Products</button></Link>
               </div>
             ) : (
               <>
