@@ -1,0 +1,138 @@
+.myaddresses{
+    /* border: 2px solid green; */
+}
+#myaddresshead{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.newaddress{
+    /* border: 2px solid red; */
+    display: flex;
+    color: green;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+#newadd{
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+#plusicon{
+    margin-top: 0px;
+}
+
+.addressdiv{
+    /* border: 2px solid yellow; */
+    padding: 10px;
+    display: flex;
+}
+.homeicon{
+    /* border: 2px solid blue; */
+    background-color: rgb(243, 242, 242);
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.add-de{
+    /* border: 2px solid brown; */
+    display: flex;
+    flex-direction: column;
+}
+.detailssss{
+    /* border: 2px solid red; */
+}
+#len1{
+    margin-top: 0px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: rgb(80, 80, 80);
+    /* font-weight: bold; */
+}
+#len2{
+    margin-top: 0px;
+    font-size: 16px;
+    margin-bottom: 1px;
+    color: rgb(80, 80, 80);
+    /* font-weight: bold; */
+}
+.new{
+    /* border: 2px solid red; */
+    background-color: white;
+    width: 400px;
+    left: 260px;
+    z-index: 1;
+    position: absolute;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 88px 50px;
+    border-radius: 10px;
+    margin: auto;
+}
+.newadd{
+    /* border: 2px solid green; */
+    /* border-radius: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid lightgray;
+}
+#enteradd{
+    /* border: 2px solid yellow; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#clo-icon{
+    cursor: pointer;
+}
+.inputfiels{
+    /* border: 2px solid cyan; */
+    padding: 15px;
+}
+.upperfields{
+    /* border: 2px solid brown; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lowerfields{
+    /* border: 2px solid orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#del-exp{
+    font-size: 12px;
+    color: rgb(135, 135, 135);
+}
+.inputssss{
+    padding: 17px;
+    width: 320px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-color: lightgray;
+}
+.inputssss::placeholder{
+    font-size: 15px;
+}
+
+.save-bttn{
+    /* border: 2px solid red; */
+}
+
+#savebutton{
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: green;
+    width: 100%;
+    cursor: pointer;
+}

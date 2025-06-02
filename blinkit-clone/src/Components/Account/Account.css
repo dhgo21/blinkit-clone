@@ -1,5 +1,6 @@
 .account{
-    z-index: 1;
+    z-index: 0;
+    position: relative;
     margin: 0 auto;
     max-width: 1200px;
     width: 61%;
@@ -14,9 +15,8 @@
     height: 550px;
     padding: 20px;
     display: flex;
+    color: #000;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
 }
 .acc-op{
     /* border: 2px solid brown; */

@@ -3,7 +3,7 @@
     position: fixed;
     right: 0;
     top: 0px;
-    max-width: 370px;
+    max-width: 400px;
     height: 99.5%;
     z-index: 999;
     background-color: rgb(245, 247, 248);
@@ -97,7 +97,9 @@
 .pro{
     /* border: 2px solid blue; */
     display: flex;
-    
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
     margin-bottom: 10px;
     justify-content: space-between;
 }
@@ -108,10 +110,12 @@
 .proimagediv{
     border: 2px solid rgb(245, 244, 244);
     border-radius: 10px;
+    /* border: 2px solid green; */
 }
 #proimage{
     width: 90px;
     border-radius: 10px;
+    
 }
 .prodetailsdiv{
     /* border: 2px solid orange; */

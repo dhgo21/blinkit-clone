@@ -12,7 +12,7 @@ import Myorders from '../Account/Myorders/Myorders'
 import Giftcard from '../Account/E-gift/Giftcard'
 import Accpriv from '../Account/Account priv/Accpriv'
 
-function Routing() {
+function Routing({ setuserd }) {
   return (
     <>
     <Routes>
@@ -24,7 +24,7 @@ function Routing() {
         
         
         {/* Nested routing for Account */}
-      <Route path="/account" element={<Account />} >
+      <Route path="/account" element={<Account setuserd={setuserd}/>} >
         <Route path="myaddresses" element={<Myaddresses />} />
         <Route path="myorders" element={<Myorders />}/>
         <Route path="egiftcards" element={<Giftcard />}/>
