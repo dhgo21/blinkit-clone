@@ -1,5 +1,6 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const initialState={
     cartitems:[],
@@ -15,12 +16,14 @@ const slice=createSlice({
             const exist=state.cartitems.findIndex(curr=>curr.id===action.payload.id)
             if(exist>=0)
             {
-                alert("Already present in Cart")
+                toast.error("This product is already present in Cart")
+                // alert("Already present in Cart")
             }
             else
             {
                 state.cartitems.push({ ...action.payload, quantity: 1 })
-                alert("Added to Cart")
+                toast.success("Product Added to Cart")
+                // alert("Added to Cart")
             }
         },
         increQty(state,action)

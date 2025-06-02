@@ -1,0 +1,91 @@
+.account{
+    z-index: 1;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 61%;
+    /* border: 2px solid blue; */
+    margin-top: 90px;
+    display: flex;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.acc-del{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 550px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+}
+.acc-op{
+    /* border: 2px solid brown; */
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgb(239, 239, 239);
+}
+.acc{
+    text-decoration: none;
+    /* border: 2px solid yellow; */
+    /* margin-bottom: 10px; */
+    padding: 10px;
+    display: flex;
+    /* align-items: center; */
+    border-bottom: 1px solid rgb(239, 239, 239);
+    color: rgb(108, 108, 108);
+}
+.acc:hover{
+    background-color: rgb(246, 245, 245);
+}
+.acc1:hover{
+    background-color: rgb(246, 245, 245);
+}
+.acc1{
+    /* border: 2px solid yellow; */
+    padding: 30px;
+    text-decoration: none;
+    font-size: 12px;
+    border-bottom: 1px solid rgb(239, 239, 239);
+    color: rgb(108, 108, 108);
+}
+.a1{
+    /* border: 2px solid brown; */
+    width: 124px;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px 0px;
+    padding-left: 10px;
+    
+}
+.a2{
+    /* border: 2px solid brown; */
+    width: 99px;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px 0px;
+    padding-left: 10px;
+}
+.a3{
+    /* border: 2px solid brown; */
+    width: 112px;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px 0px;
+    padding-left: 10px;
+}
+.a4{
+    /* border: 2px solid brown; */
+    width: 137px;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px 0px;
+    padding-left: 10px;
+}
+.a5{
+    /* border: 2px solid brown; */
+    width: 73px;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px 0px;
+    padding-left: 10px;
+}

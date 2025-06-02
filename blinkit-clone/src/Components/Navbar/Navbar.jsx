@@ -57,14 +57,15 @@ function Navbar() {
       userd ?
         <div className="userdetails" >
           <div className="myaccount">
-            <h3>My Account</h3>
+            <h3 id="my-acc">My Account</h3>
+            <p id="user-mail">{user.email}</p>
           </div>
           <div className="accdetails">
-            <div className="listss">My Orders</div>
-            <div className="listss">Saved Address</div>
-            <div className="listss">E-Gift Cards</div>
-            <div className="listss">FAQ's</div>
-            <div className="listss">Account Privacy</div>
+            <Link to="/account/myorders" className="listss">My Orders</Link>
+            <Link to="/account/myaddresses" className="listss">Saved Address</Link>
+            <Link to="/account/egiftcards" className="listss">E-Gift Cards</Link>
+            <Link className="listss">FAQ's</Link>
+            <Link to="/account/accountprivacy" className="listss">Account Privacy</Link>
             <div className="listss" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</div>
 
             <div className="qrdetails">

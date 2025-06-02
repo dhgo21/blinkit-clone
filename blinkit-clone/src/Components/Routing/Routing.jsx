@@ -6,6 +6,11 @@ import Orderdetails from '../OrderDetails/Orderdetails'
 import DBE from '../See-all/DBE'
 import Rollpapertob from '../See-all/Rollpapertob'
 import SnacksMunchies from '../See-all/SnacksMunchies'
+import Account from '../Account/Account'
+import Myaddresses from '../Account/Myaddress/Myaddresses'
+import Myorders from '../Account/Myorders/Myorders'
+import Giftcard from '../Account/E-gift/Giftcard'
+import Accpriv from '../Account/Account priv/Accpriv'
 
 function Routing() {
   return (
@@ -16,6 +21,16 @@ function Routing() {
         <Route path="/dairy-bread-eggs" element={<DBE />} />
         <Route path="/roll-paper-tob" element={<Rollpapertob />}/>
         <Route path="/Snacks-munchies" element={<SnacksMunchies />}/>
+        
+        
+        {/* Nested routing for Account */}
+      <Route path="/account" element={<Account />} >
+        <Route path="myaddresses" element={<Myaddresses />} />
+        <Route path="myorders" element={<Myorders />}/>
+        <Route path="egiftcards" element={<Giftcard />}/>
+        <Route path="accountprivacy" element={<Accpriv />}/>
+      </Route>
+
     </Routes>
     </>
   )

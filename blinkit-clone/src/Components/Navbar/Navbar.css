@@ -25,10 +25,32 @@
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1), 5px 5px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
+.myaccount{
+    /* border: 2px solid green; */
+}
+#my-acc{
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+#user-mail{
+    margin-top: 0px;
+    font-size: 12px;
+    margin-bottom: 14px;
+}
 .listss{
-    margin-bottom: 15px;
-    color: rgb(126, 126, 126);
+    margin-bottom: 8px;
+    color: rgb(99, 99, 99);
     cursor: pointer;
+    font-size: 12px;
+    /* border: 2px solid blue; */
+    padding: 7px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+.listss:hover{
+    background-color: rgb(246, 245, 245);
+    /* transition: 0.4s; */
 }
 .qrdetails{
     display: flex;
