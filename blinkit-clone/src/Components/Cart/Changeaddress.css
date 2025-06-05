@@ -1,0 +1,98 @@
+.selectadd{
+    /* border: 2px solid cyan; */
+    display: flex;
+    background-color: white;
+}
+.back-bttn{
+    /* border: 2px solid green; */
+    padding: 16px 5px 10px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.selectaddhead{
+    /* border: 2px solid brown; */
+    padding: 16px 10px 10px 5px;
+    font-weight: bold;
+}
+.addnew{
+    /* border: 2px solid orange; */
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    color: green;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#plus-icon{
+    /* border: 2px solid red; */
+    padding: 16px 10px 16px 16px;
+}
+
+#newa-dd{
+    /* border: 2px solid green; */
+    margin: 0px;
+    padding: 16px 16px 16px 10px;
+}
+
+.alladdresses{
+    /* border: 2px solid pink; */
+    margin: 10px;
+    width: 95%;
+}
+.all-add-head{
+    /* border: 2px solid yellow; */
+    font-size: 13px;
+    color: rgb(104, 104, 104);
+}
+.addressesmapping{
+    /* border: 2px solid blue; */
+    overflow: auto;
+    height: calc(270px *2);
+    margin-top: 10px;
+}
+.addressdivv{
+    /* border: 2px solid rgb(165, 165, 227); */
+    padding: 10px;
+    display: flex;
+    min-width: 350px;
+    /* max-width: 370px; */
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+#len3{
+    margin-top: 0px;
+    font-size: 12px;
+    width: 250px;
+    margin-bottom: 5px;
+    color: rgb(80, 80, 80);
+    /* font-weight: bold; */
+    /* border: 2px solid pink; */
+}
+#len4{
+    margin-top: 0px;
+    font-size: 12px;
+    margin-bottom: 1px;
+    width: 338px;
+    color: rgb(80, 80, 80);
+    /* font-weight: bold; */
+    /* border: 2px solid pink; */
+}
+
+.new1{
+    /* border: 2px solid red; */
+    background-color: white;
+    width: 400px;
+     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    position: absolute;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 88px 50px;
+    border-radius: 10px;
+    margin: auto;
+    position: absolute;
+}

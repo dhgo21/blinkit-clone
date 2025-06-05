@@ -4,7 +4,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const initialState={
     cartitems:[],
-    orderd:[]
+    orderd:[],
+    addresses: JSON.parse(localStorage.getItem("userAddresses")) || [],
+    chooseaddresses:[]
 }
 
 const slice=createSlice({
@@ -17,13 +19,11 @@ const slice=createSlice({
             if(exist>=0)
             {
                 toast.error("This product is already present in Cart")
-                // alert("Already present in Cart")
             }
             else
             {
                 state.cartitems.push({ ...action.payload, quantity: 1 })
                 toast.success("Product Added to Cart")
-                // alert("Added to Cart")
             }
         },
         increQty(state,action)
@@ -52,10 +52,37 @@ const slice=createSlice({
         orderDetails(state, action){
             state.orderd = action.payload;
         },
+        removeAddress(state, action) {
+        state.addresses = state.addresses.filter(curr => curr.id !== action.payload.id);
+        },
+        addAddress(state, action) {
+            const newAddress = { ...action.payload, id: Date.now() };
+            state.addresses.push(newAddress);
+        },
+        editAddress(state, action) {
+            const { id, updatedData } = action.payload;
+            const index = state.addresses.findIndex(addr => addr.id === id);
+            if (index >= 0) {
+                state.addresses[index] = { ...state.addresses[index], ...updatedData };
+                toast.success("Address Updated Successfully");
+            } else {
+                toast.error("Address not found!");
+            }
+        },
+        chooseAddress(state, action)
+        {
+            // const exist = state.chooseaddresses.findIndex(curr => curr.id === action.payload.id);
+            // if (exist === -1) {
+            //     state.chooseaddresses = [action.payload]; // Only keep one chosen address
+            // } else {
+            //     state.chooseaddresses = [state.chooseaddresses[exist]];
+            // }
+            state.chooseaddresses = [action.payload];
+        }
     }
 })
 
-export const {addToCart,increQty,decreQty,orderDetails}=slice.actions
+export const {addToCart,increQty,decreQty,orderDetails,removeAddress,addAddress,editAddress,chooseAddress}=slice.actions
 
 
 export const store=configureStore({

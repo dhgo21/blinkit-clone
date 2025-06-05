@@ -33,7 +33,7 @@ useEffect(() => {
   const storedAuth = localStorage.getItem("isAuthenticated");
 
   if (!isAuthenticated && storedUser && storedAuth) {
-    setuserd(true); // optionally open user menu
+    setuserd(!true); // optionally open user menu
   }
 }, []);
 
@@ -43,7 +43,7 @@ const storedAuth = localStorage.getItem("isAuthenticated") === "true";
   return (
     <>
     {
-      addToCart ? <Cart setAddToCart={setAddToCart} /> : ""
+      addToCart ? <Cart setAddToCart={setAddToCart} addToCart={addToCart}/> : ""
     }
     <div className="navbar">
       <div className="logo">

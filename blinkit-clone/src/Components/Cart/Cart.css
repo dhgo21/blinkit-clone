@@ -1,18 +1,31 @@
 .cart{
     /* border: 2px solid green; */
     position: fixed;
-    right: 0;
+    right: 0;   
+    /* transform: translateX(1512px); */
     top: 0px;
     max-width: 400px;
     height: 99.5%;
     z-index: 999;
     background-color: rgb(245, 247, 248);
-    box-shadow: -12px 20px 3230px black;
+    box-shadow: -12px 0px 40px black;
     padding: 20px;
+}
+.cart1{
+    /* border: 2px solid green;     */
+    position: fixed;
+    right: 0;   
+    top: 0px;
+    min-width: 400px;
+    height: 100%;
+    z-index: 999;
+    background-color: rgb(245, 247, 248);
+    box-shadow: -12px 0px 40px black;
+    /* transition: 0.4s; */
 }
 .cart-head{
     /* border: 2px solid yellow; */
-    width: 350px;
+    width: 390px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,11 +98,10 @@
 .cartlen{
     /* border: 2px solid green; */
     overflow: auto;
-    height: calc(175px * 3);
+    height: calc(150px * 3);
 }
 .cart-products{
     /* border: 2px solid red; */
-    
     display: flex;
     flex-direction: column;
     margin-top: 30px;
@@ -176,15 +188,75 @@
     text-align: center;
     cursor: pointer;
 }
+.bottomstuff{
+    /* border: 2px solid red; */
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.btmstf1{
+    /* border: 2px solid pink; */
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+}
 .carttotal{
     background-color: green;
     /* border: 2px solid black; */
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin: 10px;
     padding: 10px;
     max-width: 94%;
     border-radius: 10px;
+}
+.location{
+    /* border: 2px solid yellow; */
+    display: flex;
+    /* width: 48%; */
+}
+.loc-icon{
+    /* border: 2px solid orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    padding: 10px;
+}
+.loc-add{
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+}
+.loc-add1{
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 13px;
+}
+.loc-add2{
+    margin-top: 5px;
+    margin-bottom: 2px;
+    font-weight: normal;
+    color: rgb(93, 93, 93);
+    font-size: 13px;
+}
+.change-bttn{
+    /* border: 2px solid cyan; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+#changeee{
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: green;
+    font-weight: normal;
+    font-size: 13px;
+    cursor: pointer;
 }
 .total{
     /* border: 2px solid yellow; */

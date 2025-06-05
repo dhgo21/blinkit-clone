@@ -1,0 +1,8 @@
+.checkout{
+    z-index: 1;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 75px;
+    width: 100%;
+    border: 2px solid red;
+}

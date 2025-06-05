@@ -53,7 +53,7 @@ function Home() {
           Homeproducts.map((curr)=>{
             return (
               <>
-              <img src={curr.image} className='bottom-images'></img>
+              <img key={curr.id} src={curr.image} className='bottom-images'></img>
               </>
             )
           })

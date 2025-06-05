@@ -1,20 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Cart.css"
 import { RxCross2 } from "react-icons/rx";
 import { TbStopwatch } from "react-icons/tb";
 import { useDispatch, useSelector } from 'react-redux';
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaChevronRight } from "react-icons/fa";
 import { CgNotes } from "react-icons/cg";
 import { MdDeliveryDining } from "react-icons/md";
 import { IoBag } from "react-icons/io5";
 import { decreQty, increQty } from '../Redux/Store';
-function Cart({setAddToCart}) {
+import { IoLocationOutline } from "react-icons/io5";
+import Myaddresses from '../Account/Myaddress/Myaddresses';
+import Changeaddress from './Changeaddress';
+function Cart({setAddToCart,AddToCart}) {
 
   const cartproducts = useSelector(state => state.slice.cartitems)
-  
+  const addresses = useSelector(state => state.slice.addresses);
+  const [selectedAddress, setSelectedAddress] = useState(null);
+  const [ischange,setischange]=useState(false)
   const dispatch=useDispatch()
+  const navigate=useNavigate()
+  // Set default on initial load
+  useEffect(() => {
+    if (addresses.length > 0) {
+      setSelectedAddress(addresses[0]);
+    }
+  }, [addresses]);
 
   const total = cartproducts.reduce((total, item) => {
     return Math.round(total + item.price * item.quantity)
@@ -31,10 +43,35 @@ function Cart({setAddToCart}) {
   }
   const gtotal=total+10
 
+  function truncateText(text, maxLength)
+  {
+    if (text.length > maxLength)
+    {
+      return text.substring(0, maxLength) + '...';
+    }
+    return text;
+  }
+
+  function handlechange()
+  {
+    setischange(true)
+  }
+
+  function handlecheckout()
+  {
+    navigate("/checkout")
+    setAddToCart(false)
+  }
   return (
     <>
-    <div className="cart">
-      <div className="cart-head">
+    
+    <div className={ischange ? "cart1" : "cart"}>
+      {
+      ischange ? (
+          <Changeaddress setAddToCart={setAddToCart} AddToCart={AddToCart} setischange={setischange} setSelectedAddress={setSelectedAddress}/>
+      ) : (
+        <>
+        <div className="cart-head">
         <h4 className='cartheading'>My Cart</h4>
         <RxCross2 id="crosss" onClick={()=>setAddToCart(false)}/>
       </div>
@@ -132,14 +169,36 @@ function Cart({setAddToCart}) {
                   <p id="cal-del">Orders cannot be cancelled once packed for delivery. In case of unexpected delays, a refund will be provided, if applicable.</p>
                 </div>
               </div>
-              <div className="carttotal">
-                <div className="total">
-                  <p id="total">₹{gtotal}</p>
-                  <p id="totaltext">TOTAL</p>
+              <div className="bottomstuff">
+                <div className="btmstf1">
+                  <div className="location">
+                    <div className="loc-icon">
+                      <IoLocationOutline />
+                    </div>
+                    <div className="loc-add">
+                      <p className='loc-add1'>Delivering to My place</p>
+                      <p className="loc-add2">
+                        {selectedAddress &&
+                          truncateText(
+                            `${selectedAddress.name}, ${selectedAddress.houseNo}, ${selectedAddress.floor}, ${selectedAddress.block}`,
+                            44
+                          )}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="change-bttn" onClick={handlechange}>
+                    <p id="changeee">Change</p>
+                  </div>
                 </div>
-                <div className="proceed">
-                  <div className="p">Proceed</div>
-                  <div className="arr"><FaChevronRight /></div>
+                <div className="carttotal">
+                  <div className="total">
+                    <p id="total">₹{gtotal}</p>
+                    <p id="totaltext">TOTAL</p>
+                  </div>
+                  <div className="proceed" onClick={handlecheckout}>
+                    <div className="p">Proceed to Pay</div>
+                    <div className="arr"><FaChevronRight /></div>
+                  </div>
                 </div>
               </div>
               </>
@@ -147,6 +206,10 @@ function Cart({setAddToCart}) {
           }
         </div>
       </div>
+        </>
+      )
+      }
+      
 
     </div>
     </>

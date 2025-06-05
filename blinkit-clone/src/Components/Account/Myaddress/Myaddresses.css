@@ -6,7 +6,7 @@
     margin-bottom: 5px;
 }
 .newaddress{
-    /* border: 2px solid red; */
+    /* border: 2px solid red;    */
     display: flex;
     color: green;
     justify-content: space-between;
@@ -22,11 +22,19 @@
 #plusicon{
     margin-top: 0px;
 }
-
+.addresscontainer{
+    overflow: auto;
+    height: calc(240px*2);
+    padding: 5px;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+}
 .addressdiv{
     /* border: 2px solid yellow; */
     padding: 10px;
     display: flex;
+    /* justify-content: space-around; */
 }
 .homeicon{
     /* border: 2px solid blue; */
@@ -42,24 +50,57 @@
 .add-de{
     /* border: 2px solid brown; */
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     flex-direction: column;
 }
 .detailssss{
     /* border: 2px solid red; */
 }
+.address-bttn{
+    cursor: pointer;
+    background-color: green;
+    padding: 5px 12px;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.default-btn{
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    color: black;
+    background-color: orange;
+    border: none;
+    outline: none;
+    /* padding: 10px; */
+}
 #len1{
     margin-top: 0px;
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 5px;
     color: rgb(80, 80, 80);
     /* font-weight: bold; */
 }
 #len2{
     margin-top: 0px;
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 1px;
     color: rgb(80, 80, 80);
     /* font-weight: bold; */
+}
+
+.buttonsss{
+    /* border: 2px solid green; */
+    margin-top: 10px;
+    width: 50%;
+    display: flex;
+    /* justify-content: space-between; */
+    margin-left: 5px;
 }
 .new{
     /* border: 2px solid red; */
