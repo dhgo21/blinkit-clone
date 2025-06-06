@@ -7,11 +7,17 @@ import Navbar from './Components/Navbar/Navbar'
 import Routing from './Components/Routing/Routing'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useLocation } from 'react-router'
+import Loader from './Components/Loader/Loader'
 function App() {
   const [userd, setuserd] = useState(false);
+  const location = useLocation();
+
+   // Checkout route ke liye false, baki sab ke liye true
+  const shownavbar = location.pathname !== "/checkout" && location.pathname !== "/orderplaced";
   return (
     <>
-      <Navbar userd={userd} setuserd={setuserd}/>
+      {shownavbar && <Navbar userd={userd} setuserd={setuserd}/>}
       <Routing setuserd={setuserd}/>
       <ToastContainer 
         position="bottom-center"

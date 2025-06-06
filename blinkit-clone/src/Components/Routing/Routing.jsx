@@ -12,6 +12,7 @@ import Myorders from '../Account/Myorders/Myorders'
 import Giftcard from '../Account/E-gift/Giftcard'
 import Accpriv from '../Account/Account priv/Accpriv'
 import Checkout from '../Checkout/Checkout'
+import Orderplaced from '../Order Placed/Orderplaced'
 
 function Routing({ setuserd }) {
   return (
@@ -23,6 +24,7 @@ function Routing({ setuserd }) {
         <Route path="/roll-paper-tob" element={<Rollpapertob />}/>
         <Route path="/Snacks-munchies" element={<SnacksMunchies />}/>
         <Route path="/checkout" element={<Checkout />}/>
+        <Route path="/orderplaced" element={<Orderplaced />}/>
         
         {/* Nested routing for Account */}
       <Route path="/account" element={<Account setuserd={setuserd}/>} >

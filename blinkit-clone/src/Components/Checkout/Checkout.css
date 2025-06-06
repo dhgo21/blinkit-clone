@@ -1,8 +1,199 @@
 .checkout{
-    z-index: 1;
-    margin: 0 auto;
-    max-width: 1200px;
-    margin-top: 75px;
+    /* z-index: 1; */
+    margin: 0px;
+    /* max-width: 1200px; */
+    /* margin-top: 75px; */
+    width: 99.8%;
+    /* border: 2px solid red; */
+}
+
+.checkout-navbar{
+    /* border: 2px solid blue; */
+    padding: 0px 10px 3px 31px;
+    border-bottom: 1px solid rgb(242, 242, 242);
+}
+#navlogo{
+    width: 112px;
+}
+#pay-met{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.payment-op{
     width: 100%;
-    border: 2px solid red;
+    max-width: 1000px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1;
+    margin-top: 65px !important;
+    margin: 0 auto;
+    display: flex;
+}
+.pay{
+    /* border: 2px solid orange; */
+}
+.od{
+    border: 1px solid lightgray;
+    margin-left: 20px;
+    min-width: 300px;
+}
+.upi-box{
+    /* border: 1px solid lightgray; */
+    margin: 10px;
+    padding: 10px;
+    /* border-radius: 5px; */
+}
+#addpui{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(34, 34, 34);
+}
+.upidiv{
+    
+    border: 1px solid lightgray;
+    background-color: rgba(223, 244, 250, 0.496);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+#upiimages{
+    width: 57px;
+    height: 27px;
+}
+.upiapps{
+    /* border: 2px solid purple; */
+    margin-left: 20px;
+    display: flex;
+    width: 260px;
+    margin-top: 10px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.upi-input{
+    /* border: 2px solid red; */
+    
+    width: 520px;
+    justify-content: space-between;
+    display: flex;
+    margin-left: 20px;
+}
+
+#upienter{
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid lightgray;
+    width: 340px;
+    font-size: 20px;
+}
+#upienter::placeholder{
+    font-size: 20px;
+    color: rgb(186, 185, 185);
+}
+#pay-bttns{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: green;
+    color: white;
+    width: 140px;
+    height: 55px;
+    /* font-weight: bold; */
+    cursor: pointer;
+}
+.upi-ex{
+    /* border: 2px solid green; */
+    margin-top: 30px;
+}
+#upi-ex1{
+    margin-bottom: 7px;
+    font-size: 12px;
+    color: rgb(145, 144, 144);
+    margin-left: 20px;
+}
+.del-address{
+    /* border: 2px solid red; */
+    padding: 20px;
+    max-width: 290px;
+    word-wrap: break-word;
+    border-bottom: 1px solid lightgray;
+}
+#del-add{
+    margin: 0px;
+    font-size: 20px;
+}
+.my-pl{
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
+    word-wrap: break-word; 
+    margin-top: 5px;
+}
+#myplace{
+    margin-top: 0px;
+    font-size: 11px;
+    color: rgb(146, 145, 145);
+    /* border: 2px solid blue; */
+    max-width: 240px;
+    margin-bottom: 0px;
+}
+
+.mycartdiv{
+    /* border: 2px solid yellow; */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 1px solid lightgray; */
+}
+.cartpro{
+    /* border: 2px solid red; */
+    overflow: auto;
+    height: calc(130px*2);
+}
+.val1{
+    /* border: 2px solid pink; */
+    border-top: 1px solid lightgray;
+    padding: 20px;
+    display: flex;
+    width: 240px;
+    /* justify-content: space-between; */
+}
+.qty{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.item-image{
+    /* border: 2px solid cyan; */
+    margin-right: 10px;
+}
+#item-ph{
+    width: 50px;
+}
+.item-name{
+    /* border: 2px solid brown; */
+    min-width: 150px;
+}
+.pro-info1{
+    margin-top: 0px;
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+.pro-info2{
+    margin-top: 0px;
+    margin-bottom: 2px;
+    font-size: 12px;
+    color: rgb(139, 139, 139);
+}
+.pro-info3{
+    margin-top: 0px;
+    margin-bottom: 2px;
+    font-size: 12px;
+    color: rgb(95, 95, 95);
+    font-weight: bold;
 }

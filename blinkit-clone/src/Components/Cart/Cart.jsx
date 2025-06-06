@@ -59,7 +59,7 @@ function Cart({setAddToCart,AddToCart}) {
 
   function handlecheckout()
   {
-    navigate("/checkout")
+    navigate("/checkout", {state: {gtotal,selectedAddress}})
     setAddToCart(false)
   }
   return (
@@ -180,8 +180,7 @@ function Cart({setAddToCart,AddToCart}) {
                       <p className="loc-add2">
                         {selectedAddress &&
                           truncateText(
-                            `${selectedAddress.name}, ${selectedAddress.houseNo}, ${selectedAddress.floor}, ${selectedAddress.block}`,
-                            44
+                            `${selectedAddress.name}, ${selectedAddress.houseNo}, ${selectedAddress.floor}, ${selectedAddress.block}`
                           )}
                       </p>
                     </div>

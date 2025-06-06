@@ -1,0 +1,42 @@
+.orderplaced{
+    z-index: 1;
+    min-height: 100%;
+    /* border: 1px solid green; */
+    padding: 10px;
+    height: 673px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.op{
+    border: 1px solid lightgray;
+    width: 500px;
+    /* height: 300px; */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.tick{
+    /* border: 2px solid pink; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.op-del{
+    /* border: 2px solid red; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    
+}
+#tick-logo{
+    width: 100px;
+}
+#delt{
+    margin-top: 5px;
+    color: grey;
+}
