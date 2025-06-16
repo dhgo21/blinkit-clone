@@ -6,7 +6,8 @@ const initialState={
     cartitems:[],
     orderd:[],
     addresses: JSON.parse(localStorage.getItem("userAddresses")) || [],
-    chooseaddresses:[]
+    chooseaddresses:[],
+    orders: [],
 }
 
 const slice=createSlice({
@@ -72,11 +73,19 @@ const slice=createSlice({
         chooseAddress(state, action)
         {
             state.chooseaddresses = [action.payload];
+        },
+        placeOrder(state)
+        {
+            if (state.cartitems.length > 0)
+            {
+                state.orders.push([...state.cartitems]);
+                state.cartitems = [];
+            }
         }
     }
 })
 
-export const {addToCart,increQty,decreQty,orderDetails,removeAddress,addAddress,editAddress,chooseAddress}=slice.actions
+export const {addToCart,increQty,decreQty,orderDetails,removeAddress,addAddress,editAddress,chooseAddress,placeOrder}=slice.actions
 
 
 export const store=configureStore({

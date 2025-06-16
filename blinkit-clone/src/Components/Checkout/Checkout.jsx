@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import "./Checkout.css"
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useLocation, useNavigate } from 'react-router'
 import { useForm } from 'react-hook-form'
+import { placeOrder } from '../Redux/Store'
 
 function Checkout() {
   const upiapps=["/images/gpay.webp","/images/paytm.webp","/images/phonepay.webp","/images/bhim.webp"]
@@ -10,6 +11,7 @@ function Checkout() {
   const [isDisabled, setIsDisabled] = useState(true);
   const location = useLocation();
   const navigate=useNavigate()
+  const dispatch=useDispatch()
   const {gtotal,selectedAddress} = location.state || {}; // optional chaining
 
 
@@ -32,6 +34,11 @@ function Checkout() {
     const isValid = /^[a-zA-Z0-9.\-_]{2,256}@[a-zA-Z]{2,64}$/.test(upiid || "");
     setIsDisabled(!isValid);
   }, [upiid]);
+
+  function handlePlaceOrder()
+  {
+    dispatch(placeOrder());
+  }
   return (
     <>
     <div className="checkout">
@@ -71,7 +78,7 @@ function Checkout() {
                           },
                       })} />
                       
-                      <button id={isDisabled ? "pay-dis" : "pay-bttns"} disabled={isDisabled}>Pay Now ₹{gtotal}</button>
+                      <button id={isDisabled ? "pay-dis" : "pay-bttns"} disabled={isDisabled} onClick={handlePlaceOrder}>Pay Now ₹{gtotal}</button>
                       </div>
                       {errors.upiid && <p className='e'>{errors.upiid.message}</p>}
                   </form>

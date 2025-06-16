@@ -13,6 +13,9 @@ function Orderplaced({setod}) {
         return () => clearTimeout(timer); // cleanup
     },[])
 
+
+
+
   return (
     <>
     {isloader ? (

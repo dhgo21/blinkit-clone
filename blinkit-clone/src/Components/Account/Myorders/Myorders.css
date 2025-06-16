@@ -16,19 +16,28 @@
     border: 2px solid blue;
 }
 .orders{
-    border: 2px solid yellow;
+    border: 2px solid rgb(240, 240, 240);
     border-radius: 7px;
     padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 .order-arrived{
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     display: flex;
 }
 .order-images{
-    border: 2px solid green;
+    /* border: 2px solid green; */
+    padding: 10px;
+    padding-bottom: 0px;
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgb(236, 233, 233);
 }
 .tick-icon{
     /* border: 2px solid black; */
+    margin-right: 10px;
     padding: 7px;
     font-size: 20px;
     background-color: rgb(217, 242, 217);
@@ -38,9 +47,35 @@
 #t{
     width: 25px;
 }
+.blockbbb{
+    /* border: 2px solid red; */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
 .timee{
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
 }   
 .rightarrow{
-    border: 2px solid cyan;
+    /* border: 2px solid cyan; */
+    display: flex;
+    align-items: center;
+}
+#arrivedhead{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#amount-time{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    color: rgb(110, 110, 110);
+}
+#proo-img{
+    width: 60px;
+    border: 2px solid rgb(240, 240, 240);
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 10px;
 }
