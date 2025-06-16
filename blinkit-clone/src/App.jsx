@@ -11,6 +11,7 @@ import { useLocation } from 'react-router'
 import Loader from './Components/Loader/Loader'
 function App() {
   const [userd, setuserd] = useState(false);
+  const [od,setod]=useState(true)
   const location = useLocation();
 
    // Checkout route ke liye false, baki sab ke liye true
@@ -18,7 +19,7 @@ function App() {
   return (
     <>
       {shownavbar && <Navbar userd={userd} setuserd={setuserd}/>}
-      <Routing setuserd={setuserd}/>
+      <Routing setuserd={setuserd} od={od} setod={setod}/>
       <ToastContainer 
         position="bottom-center"
         autoClose={3000}

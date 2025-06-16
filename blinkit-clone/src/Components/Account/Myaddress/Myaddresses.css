@@ -177,3 +177,15 @@
     width: 100%;
     cursor: pointer;
 }
+#savebutton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.error{
+    /* border: 2px solid blue; */
+    color: red;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}

@@ -189,14 +189,16 @@ function Cart({setAddToCart,AddToCart}) {
                     <p id="changeee">Change</p>
                   </div>
                 </div>
-                <div className="carttotal">
-                  <div className="total">
-                    <p id="total">₹{gtotal}</p>
-                    <p id="totaltext">TOTAL</p>
-                  </div>
-                  <div className="proceed" onClick={handlecheckout}>
-                    <div className="p">Proceed to Pay</div>
-                    <div className="arr"><FaChevronRight /></div>
+                <div className="bttmstuf2">
+                    <div className="carttotal">
+                    <div className="total">
+                      <p id="total">₹{gtotal}</p>
+                      <p id="totaltext">TOTAL</p>
+                    </div>
+                    <div className="proceed" onClick={handlecheckout}>
+                      <div className="p">Proceed to Pay</div>
+                      <div className="arr"><FaChevronRight /></div>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -71,12 +71,6 @@ const slice=createSlice({
         },
         chooseAddress(state, action)
         {
-            // const exist = state.chooseaddresses.findIndex(curr => curr.id === action.payload.id);
-            // if (exist === -1) {
-            //     state.chooseaddresses = [action.payload]; // Only keep one chosen address
-            // } else {
-            //     state.chooseaddresses = [state.chooseaddresses[exist]];
-            // }
             state.chooseaddresses = [action.payload];
         }
     }

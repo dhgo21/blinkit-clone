@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react'
 import "./Orderplaced.css"
 import Loader from '../Loader/Loader'
 import { Link } from 'react-router'
-function Orderplaced() {
+function Orderplaced({setod}) {
     const [isloader,setisloader]=useState(true)
 
     useEffect(()=>{
         const timer=setTimeout(()=>{
             setisloader(false)
+            setod(true)
         },3000)
         return () => clearTimeout(timer); // cleanup
     },[])

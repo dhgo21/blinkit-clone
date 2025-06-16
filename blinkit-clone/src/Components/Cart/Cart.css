@@ -191,6 +191,7 @@
 .bottomstuff{
     /* border: 2px solid red; */
     margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -201,9 +202,13 @@
     display: flex;
     justify-content: space-between;
 }
+.bttmstuf2{
+    /* border: 2px solid yellow; */
+    height: 64px;
+}
 .carttotal{
     background-color: green;
-    /* border: 2px solid black; */
+    /* border: 2px solid orange; */
     display: flex;
     justify-content: space-between;
     margin: 10px;

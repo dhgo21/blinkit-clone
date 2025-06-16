@@ -1,0 +1,46 @@
+.emptymyoders{
+    /* border: 2px solid blue; */
+}
+.empty-image{
+    /* border: 2px solid red; */
+    /* width: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#empty-logo{
+    width: 400px;
+    /* border: 2px solid green; */
+}
+.myorders{
+    border: 2px solid blue;
+}
+.orders{
+    border: 2px solid yellow;
+    border-radius: 7px;
+    padding: 10px;
+}
+.order-arrived{
+    border: 2px solid orange;
+    display: flex;
+}
+.order-images{
+    border: 2px solid green;
+}
+.tick-icon{
+    /* border: 2px solid black; */
+    padding: 7px;
+    font-size: 20px;
+    background-color: rgb(217, 242, 217);
+    color: green;
+    border-radius: 7px;
+}
+#t{
+    width: 25px;
+}
+.timee{
+    border: 2px solid purple;
+}   
+.rightarrow{
+    border: 2px solid cyan;
+}

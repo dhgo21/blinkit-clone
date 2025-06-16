@@ -1,13 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Checkout.css"
 import { useSelector } from 'react-redux'
-import { Link, useLocation } from 'react-router'
+import { Link, useLocation, useNavigate } from 'react-router'
+import { useForm } from 'react-hook-form'
+
 function Checkout() {
   const upiapps=["/images/gpay.webp","/images/paytm.webp","/images/phonepay.webp","/images/bhim.webp"]
   const cartproducts = useSelector(state => state.slice.cartitems)
-
+  const [isDisabled, setIsDisabled] = useState(true);
   const location = useLocation();
+  const navigate=useNavigate()
   const {gtotal,selectedAddress} = location.state || {}; // optional chaining
+
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm({
+    mode: "onChange"
+  });
+
+  const onSubmit = (data) => {
+    console.log("Valid UPI Submitted:", data.upiid);
+    navigate("/orderplaced", { target: '_blank' }); // navigate programmatically
+  };
+  const upiid = watch("upiid");
+
+  useEffect(() => {
+    const isValid = /^[a-zA-Z0-9.\-_]{2,256}@[a-zA-Z]{2,64}$/.test(upiid || "");
+    setIsDisabled(!isValid);
+  }, [upiid]);
   return (
     <>
     <div className="checkout">
@@ -24,19 +48,34 @@ function Checkout() {
               <div className="upidiv">
                 <div className="upiapps">
                   {
-                    upiapps.map((curr)=>{
+                    upiapps.map((curr,index)=>{
                       return (
                         <>
-                        <img id="upiimages"src={curr}></img>
+                        <img key={index}id="upiimages"src={curr}></img>
                         </>
                       )
                     })
                   }
                 </div>
-                <div className="upi-input">
-                  <input id="upienter"placeholder='example@upi'></input>
-                  <Link to="/orderplaced" target='_blank'><button id="pay-bttns">Pay Now ₹{gtotal}</button></Link>
-                </div>
+                
+                  <form className="upi-input" onSubmit={handleSubmit(onSubmit)}>
+                    <div className="upiform">
+                      <input
+                        id="upienter"
+                        placeholder='example@upi'
+                        {...register("upiid", {
+                          required: "UPI ID is required",
+                          pattern: {
+                            value: /^[a-zA-Z0-9.\-_]{2,256}@[a-zA-Z]{2,64}$/,
+                            message: "Enter a valid UPI ID (e.g., yourname@bank)"
+                          },
+                      })} />
+                      
+                      <button id={isDisabled ? "pay-dis" : "pay-bttns"} disabled={isDisabled}>Pay Now ₹{gtotal}</button>
+                      </div>
+                      {errors.upiid && <p className='e'>{errors.upiid.message}</p>}
+                  </form>
+
                 <div className="upi-ex">
                   <p id="upi-ex1">The UPI ID is in the format of name/phone number@bankname</p>
                 </div>
