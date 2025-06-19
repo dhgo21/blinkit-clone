@@ -2,12 +2,13 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const initialState={
     cartitems:[],
     orderd:[],
     addresses: JSON.parse(localStorage.getItem("userAddresses")) || [],
     chooseaddresses:[],
-    orders: [],
+    orders: JSON.parse(localStorage.getItem("userOrders")) || [],
 }
 
 const slice=createSlice({
@@ -78,10 +79,35 @@ const slice=createSlice({
         {
             if (state.cartitems.length > 0)
             {
-                state.orders.push([...state.cartitems]);
-                state.cartitems = [];
+                const date = new Date()
+                const formatted = date.toLocaleDateString("en-GB", {
+                    day: "numeric",
+                    month: "long",
+                    year: "2-digit",
+                }); // Example: "19 June 25"
+                const timeIST = date.toLocaleTimeString("en-US", {
+                    hour: "numeric",
+                    minute: "numeric",
+                    hour12: true,
+                    timeZone: "Asia/Kolkata",
+                }); // Example: "2:30 PM"
+
+                const orderData = {
+                    items: [...state.cartitems],
+                    orderTime: {
+                        formatted,
+                        timeIST
+                    }
+                };
+
+                state.orders.push(orderData)
+                state.cartitems = []
+
+                  //  Save to localStorage
+                localStorage.setItem("userOrders", JSON.stringify(state.orders));
             }
         }
+
     }
 })
 

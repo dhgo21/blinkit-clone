@@ -43,9 +43,13 @@
 }
 .acc1{
     /* border: 2px solid yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
     padding: 30px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
     border-bottom: 1px solid rgb(239, 239, 239);
     color: rgb(108, 108, 108);
 }

@@ -13,8 +13,9 @@ import Giftcard from '../Account/E-gift/Giftcard'
 import Accpriv from '../Account/Account priv/Accpriv'
 import Checkout from '../Checkout/Checkout'
 import Orderplaced from '../Order Placed/Orderplaced'
+import Orderhistory from '../Account/OrderHistory/Orderhistory'
 
-function Routing({ setuserd,setod,od}) {
+function Routing({ setuserd,setod,od,setbacktoggle,backtoggle}) {
   return (
     <>
     <Routes>
@@ -29,11 +30,12 @@ function Routing({ setuserd,setod,od}) {
         {/* Nested routing for Account */}
       <Route path="/account" element={<Account setuserd={setuserd}/>} >
         <Route path="myaddresses" element={<Myaddresses />} />
-        <Route path="myorders" element={<Myorders od={od}/>}/>
+        <Route path="myorders" element={<Myorders od={od} setbacktoggle={setbacktoggle} backtoggle={backtoggle}/>}>
+          <Route path="orderinfo" element={<Orderhistory />}/>
+        </Route>
         <Route path="egiftcards" element={<Giftcard />}/>
         <Route path="accountprivacy" element={<Accpriv />}/>
       </Route>
-
     </Routes>
     </>
   )

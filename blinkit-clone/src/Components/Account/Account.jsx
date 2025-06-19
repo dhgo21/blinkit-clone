@@ -12,11 +12,13 @@ function Account({ setuserd }) {
      useEffect(() => {
     setuserd(false);
   }, []);
+  const storedUser = JSON.parse(localStorage.getItem("user"));
+  
   return (
     <>
     <div className="account">
         <div className="acc-op">
-            <Link className='acc1'>{user?.email}</Link>
+            <Link className='acc1'>{user?.email || storedUser?.email}</Link>
             <Link className='acc' to="myaddresses"><div className='a1'><GrMapLocation />My Addresses</div></Link>
             <Link className='acc' to="myorders"><div className='a2'><BsBoxSeam />My Orders</div></Link>
             <Link className='acc' to="egiftcards"><div className='a3'><MdCardGiftcard />E-Gift Cards</div></Link>

@@ -38,6 +38,7 @@ function Checkout() {
   function handlePlaceOrder()
   {
     dispatch(placeOrder());
+    
   }
   return (
     <>

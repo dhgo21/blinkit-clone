@@ -1,0 +1,153 @@
+.orderhistory{
+    /* border: 2px solid red; */
+    /* padding: 10px; */
+    overflow: auto;
+    height: calc(270px *2);
+    scrollbar-width: none;
+}
+.back-bttnn{
+    /* border: 2px solid green; */
+}
+.time-dat{
+    /* border: 2px solid yellow; */
+}
+#backkk{
+    border: 1px solid rgb(227, 227, 227);
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#os{
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 20px;
+}
+#os-time{
+    margin-top: 5px;
+    font-size: 13px;
+    color: grey;
+}
+.prod{
+    /* border: 2px solid pink; */
+    border-bottom: 10px solid rgb(248, 246, 246);
+    border-radius: 5px;
+}
+.pro-head{
+    /* border: 2px solid saddlebrown; */
+    margin-bottom: 10px;
+}
+.pro-det{
+    /* border: 2px solid purple; */
+    /* display: flex; */
+}
+#itemssss{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.pro-img{
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 7px;
+    margin-right: 10px;
+}
+.prodetprice{
+    /* border: 2px solid yellow; */
+}
+.prodetprice{
+    /* border: 2px solid orange; */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.amounttt{
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titleeee{
+    /* border: 2px solid red; */
+}
+#pro-photo{
+    width: 60px;
+    border-radius: 7px;
+}
+.boxxx{
+    display: flex;
+    /* border: 2px solid brown; */
+    margin-bottom: 10px;
+}
+#pro-title{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+#pro-weight{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    color: grey;
+}
+#pro-price{
+    margin:0px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.bill-del{
+    /* border: 2px solid green; */
+}
+.bill-head{
+    /* border: 2px solid red; */
+    margin-top: 20px;
+}
+.bill-details{
+    /* border: 2px solid yellow; */
+    margin-bottom: 0px;
+    border-bottom: 10px solid rgb(248, 246, 246);
+}
+#b-h{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.b{
+    margin-bottom: 0px;
+    font-weight: normal;
+    font-size: 12px;
+    color:#4F4F4F;
+}
+.item-total,.handlee-charge,.delivery-charge,.bill-total{
+    display: flex;
+    justify-content: space-between;
+}
+.bill-total{
+    font-size: 13px;
+}
+.o{
+    /* border: 2px solid yellow; */
+    margin-top: 20px;
+    border-bottom: 10px solid rgb(248, 246, 246);
+}
+#o-h{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    /* margin-left: 23px; */
+    font-size: 17px;
+}
+.o-head{
+    /* border: 2px solid green; */
+}
+.o-d{
+    /* border: 2px solid blue; */
+}
+.p-d{
+    color:#4F4F4F;
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.p-d2{
+    font-size: 14px;
+    margin-top: 5px;
+}
