@@ -1,11 +1,13 @@
 const Homeproducts=[
     {
         id:1,
-        image:"/images/home-slide-images/pan-corner.webp"
+        image:"/images/home-slide-images/pan-corner.webp",
+        to:"/paan-corner"
     },
     {
         id:2,
-        image:"/images/home-slide-images/aata-rice.webp"
+        image:"/images/home-slide-images/aata-rice.webp",
+        to:"/aata"
     },
     {
         id:3,

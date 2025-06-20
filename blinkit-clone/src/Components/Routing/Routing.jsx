@@ -14,6 +14,11 @@ import Accpriv from '../Account/Account priv/Accpriv'
 import Checkout from '../Checkout/Checkout'
 import Orderplaced from '../Order Placed/Orderplaced'
 import Orderhistory from '../Account/OrderHistory/Orderhistory'
+import Pharmacy from '../Pharmacy/Pharmacy'
+import Petcare from '../PetCare/Petcare'
+import Babycare from '../BabyCare/Babycare'
+import Paancorner from '../PaanCorner/Paancorner'
+import Aata from '../Aata/Aata'
 
 function Routing({ setuserd,setod,od,setbacktoggle,backtoggle}) {
   return (
@@ -26,6 +31,11 @@ function Routing({ setuserd,setod,od,setbacktoggle,backtoggle}) {
         <Route path="/Snacks-munchies" element={<SnacksMunchies />}/>
         <Route path="/checkout" element={<Checkout />}/>
         <Route path="/orderplaced" element={<Orderplaced setod={setod} />}/>
+        <Route path="/pharmacy-products" element={<Pharmacy />}/>
+        <Route path="/pet-care" element={<Petcare />}/>
+        <Route path="/baby-care" element={<Babycare />}/>
+        <Route path="/paan-corner" element={<Paancorner />}/>
+        <Route path="/aata" element={<Aata />}/>
         
         {/* Nested routing for Account */}
       <Route path="/account" element={<Account setuserd={setuserd}/>} >

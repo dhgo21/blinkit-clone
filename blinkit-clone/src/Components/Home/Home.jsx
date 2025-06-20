@@ -10,7 +10,7 @@ import Snacks from './Snacks';
 import { useDispatch } from 'react-redux';
 import { addToCart, orderDetails } from '../Redux/Store';
 import Footer from '../Footer/Footer';
-import { Link, useNavigate } from 'react-router';
+import { Link, Links, useNavigate } from 'react-router';
 
 function Home() {
   const scrollref1=useRef(null)
@@ -41,19 +41,19 @@ function Home() {
     <>
     <div className="home">
       <div className="top-img">
-        <img id="home-img-1" src='/images/paan-corner.webp'></img>
+        <Link to="/paan-corner"><img id="home-img-1" src='/images/paan-corner.webp'></img></Link>
       </div>
       <div className="mid-img">
-        <img className="mid-images" src='/images/pharmacy.webp'></img>
-        <img className="mid-images" src='/images/Pet-Care.webp'></img>
-        <img className="mid-images" src='/images/babycare.webp'></img>
+        <Link to="/pharmacy-products"><img className="mid-images" src='/images/pharmacy.webp'></img></Link>
+        <Link to="/pet-care"><img className="mid-images" src='/images/Pet-Care.webp'></img></Link>
+        <Link to="/baby-care"><img className="mid-images" src='/images/babycare.webp'></img></Link>
       </div>
       <div className="bottom-banner-imgs">
         {
           Homeproducts.map((curr)=>{
             return (
               <>
-              <img key={curr.id} src={curr.image} className='bottom-images'></img>
+              <Link to={curr.to}><img key={curr.id} src={curr.image} className='bottom-images'></img></Link>
               </>
             )
           })
