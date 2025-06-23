@@ -11,75 +11,43 @@ const Homeproducts=[
     },
     {
         id:3,
-        image:"/images/home-slide-images/baby-care.webp"
+        image:"/images/home-slide-images/baby-care.webp",
+        to:"/baby-care"
     },
     {
         id:4,
-        image:"/images/home-slide-images/bakery.webp"
+        image:"/images/home-slide-images/bakery.webp",
+        to:"/bakery-biscuits"
     },
     {
         id:5,
-        image:"/images/home-slide-images/breakfast.webp"
+        image:"/images/home-slide-images/breakfast.webp",
+        to:"/breakfast-instantfood"
     },
     {
         id:6,
-        image:"/images/home-slide-images/chicken-meat.webp"
+        image:"/images/home-slide-images/chicken-meat.webp",
+        to:"/chicken-meat"
     },
     {
         id:7,
-        image:"/images/home-slide-images/cleaning.webp"
+        image:"/images/home-slide-images/petcare.webp",
+        to:"/pet-care"
     },
     {
         id:8,
-        image:"/images/home-slide-images/cold-drinks.webp"
+        image:"/images/home-slide-images/pharma.webp",
+        to:"/pharmacy-products"
     },
     {
         id:9,
-        image:"/images/home-slide-images/dairy-bread.webp"
+        image:"/images/home-slide-images/dairy-bread.webp",
+        to:"/dairy-bread-eggs"
     },
     {
         id:10,
-        image:"/images/home-slide-images/fruits-veg.webp"
-    },
-    {
-        id:11,
-        image:"/images/home-slide-images/home-office.webp"
-    },
-    {
-        id:12,
-        image:"/images/home-slide-images/masala-oil.webp"
-    },
-    {
-        id:13,
-        image:"/images/home-slide-images/organic.webp"
-    },
-    {
-        id:14,
-        image:"/images/home-slide-images/personal-care.webp"
-    },
-    {
-        id:15,
-        image:"/images/home-slide-images/petcare.webp"
-    },
-    {
-        id:16,
-        image:"/images/home-slide-images/pharma.webp"
-    },
-    {
-        id:17,
-        image:"/images/home-slide-images/sauce.webp"
-    },
-    {
-        id:18,
-        image:"/images/home-slide-images/snacks.webp"
-    },
-    {
-        id:19,
-        image:"/images/home-slide-images/sweet.webp"
-    },
-    {
-        id:20,
-        image:"/images/home-slide-images/tea-coffee.webp"
+        image:"/images/home-slide-images/cleaning.webp",
+        to:"/cleaning-products"
     },
 ]
 export default Homeproducts

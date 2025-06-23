@@ -64,10 +64,66 @@ const aataitems=[
     },
     {
         id:130,
-        title:"Gangaur Multigrain Atta",
-        weight:"1 kg + 500 g",
-        price:239,
-        image:"/images/aata/india.webp"
+        title:"Daawat Brown Basmati Rice (Extra Long Grain)",
+        weight:"1 kg",
+        price:177,
+        image:"/images/aata/dbrown.webp"
+    },
+    {
+        id:131,
+        title:"Tata Sampann Unpolished Chana Dal",
+        weight:"500 g",
+        price:64,
+        image:"/images/aata/chana.webp"
+    },
+    {
+        id:132,
+        title:"Sagar Toor Dal/Toor Dal",
+        weight:"1 kg",
+        price:159,
+        image:"/images/aata/toor.webp"
+    },
+    {
+        id:133,
+        title:"Basic Arhar/ Toor Dal",
+        weight:"1 kg",
+        price:142,
+        image:"/images/aata/arhar.webp"
+    },
+    {
+        id:134,
+        title:"Whole Farm Grocery Kala Chana",
+        weight:"1 kg",
+        price:104,
+        image:"/images/aata/kala.webp"
+    },
+    {
+        id:135,
+        title:"Whole Farm Grocery Urad Dal (Chilka)",
+        weight:"1 kg",
+        price:137,
+        image:"/images/aata/urd.webp"
+    },
+    {
+        id:136,
+        title:"Shyam Mustard Dal",
+        weight:"100 g",
+        price:25,
+        image:"/images/aata/mustard.webp"
+    },
+    {
+        id:137,
+        title:"Organic India Organic Kabuli Chana",
+        weight:"500 g",
+        price:145,
+        image:"/images/aata/organic.webp"
+    },
+    {
+        id:138,
+        title:"Organic Tattva - Organic Kala Chana",
+        weight:"500 g",
+        price:93,
+        image:"/images/aata/o.webp"
     },
 ]
 export default aataitems

@@ -9,3 +9,10 @@
     display: flex;
     flex-direction: column;
 }
+
+@media (min-width:340px) and (max-width:600px)
+{
+    .petcare{
+        min-width: 335%;
+    }
+}

@@ -40,3 +40,12 @@
     margin-top: 5px;
     color: grey;
 }
+
+
+@media (min-width:340px) and (max-width:600px)
+{
+    .op{
+    width: 200px;
+    }
+    
+}

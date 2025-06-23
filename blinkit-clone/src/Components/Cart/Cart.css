@@ -371,3 +371,12 @@
     font-size: 13px;
     color: rgb(101, 101, 101);
 }
+
+@media (min-width:340px) and (max-width:600px)
+{
+    .cartlen{
+    /* border: 2px solid green; */
+    overflow: auto;
+    height: calc(290px * 3);
+    }
+}

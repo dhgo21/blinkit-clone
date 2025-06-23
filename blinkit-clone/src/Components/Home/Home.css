@@ -40,7 +40,7 @@
 .bottom-banner-imgs{
     /* border: 2px solid blue;  */
     display: grid;
-    grid-template-rows: 150px 150px;
+    grid-template-rows: 150px;
     grid-template-columns: 122px 122px 122px 122px 122px 122px 122px 122px 120px 120px;
 }
 .bottom-images{
@@ -165,4 +165,21 @@
 }
 .snacks{
     margin-bottom: 70px;
+}
+
+@media (min-width:340px) and (max-width:600px)
+{
+    .mid-img{
+    min-width: 320%;
+    }
+    #home-img-1{
+    width: 340%;
+    cursor: pointer;
+    }
+    .home-bottom-products, .roll-pap-tob,.snacks{
+    width: 335%;
+    }
+    .arrow {
+    right: -235%;
+    }
 }

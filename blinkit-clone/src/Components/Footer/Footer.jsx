@@ -3,6 +3,7 @@ import "./Footer.css"
 import { FaFacebook, FaInstagramSquare} from "react-icons/fa";
 import { FaSquareTwitter } from "react-icons/fa6";
 import { BsFillThreadsFill } from "react-icons/bs";
+import { Link } from 'react-router';
 function Footer() {
   return (
     <>
@@ -89,10 +90,10 @@ function Footer() {
           <img className="stores" src='/images/googlestore.webp'></img>
         </div>
         <div className="social">
-          <FaFacebook />
-          <FaSquareTwitter />
-          <FaInstagramSquare />
-          <BsFillThreadsFill />
+          <Link to="https://www.linkedin.com/in/dg21/" target='_blank'><FaFacebook /></Link> 
+          <Link to="https://www.linkedin.com/in/dg21/" target='_blank'><FaSquareTwitter /></Link>
+          <Link to="https://www.linkedin.com/in/dg21/" target='_blank'><FaInstagramSquare /></Link>
+          <Link to="https://www.linkedin.com/in/dg21/" target='_blank'><BsFillThreadsFill /></Link>
         </div>
       </div>
       <div className="lastlines">

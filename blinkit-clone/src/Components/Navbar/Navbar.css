@@ -207,3 +207,15 @@
   background-color: rgba(0,0,0,0.5); /* Optional dark backdrop */
   z-index: 999; /* Lower than cart, higher than page */
 }
+
+@media (min-width:340px) and (max-width:600px)
+{
+    .cart-overlay {
+    top: 0;
+    left: 0;
+    height: 500vh;
+    width: 350vw;
+    background-color: rgba(0,0,0,0.5); /* Optional dark backdrop */
+    z-index: 999; /* Lower than cart, higher than page */
+    }
+}

@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { addToCart, orderDetails } from '../Redux/Store';
 import aataitems from './Aataitems';
+import Footer from '../Footer/Footer';
 function Aata() {
     const dispatch=useDispatch()
   const navigate=useNavigate()
@@ -53,6 +54,7 @@ function Aata() {
           }
       </div>
     </div>
+    <Footer />
     </>
   )
 }

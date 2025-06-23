@@ -19,7 +19,10 @@ import Petcare from '../PetCare/Petcare'
 import Babycare from '../BabyCare/Babycare'
 import Paancorner from '../PaanCorner/Paancorner'
 import Aata from '../Aata/Aata'
-
+import Bakery from '../bakery-Bis/Bakery'
+import Breakfast from '../BreakfastInstant/Breakfast'
+import Chicken from "../ChickenMeet/Chicken"
+import Cleaning from '../Cleaning/Cleaning'
 function Routing({ setuserd,setod,od,setbacktoggle,backtoggle}) {
   return (
     <>
@@ -36,6 +39,10 @@ function Routing({ setuserd,setod,od,setbacktoggle,backtoggle}) {
         <Route path="/baby-care" element={<Babycare />}/>
         <Route path="/paan-corner" element={<Paancorner />}/>
         <Route path="/aata" element={<Aata />}/>
+        <Route path="/bakery-biscuits" element={<Bakery />}/>
+        <Route path="/breakfast-instantfood" element={<Breakfast />}/>
+        <Route path="/chicken-meat" element={<Chicken />}/>
+        <Route path="/cleaning-products" element={<Cleaning />}/>
         
         {/* Nested routing for Account */}
       <Route path="/account" element={<Account setuserd={setuserd}/>} >

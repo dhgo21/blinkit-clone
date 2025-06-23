@@ -94,3 +94,18 @@
     padding: 10px 0px;
     padding-left: 10px;
 }
+
+
+@media (min-width:340px) and (max-width:600px)
+{
+    .acc{
+    width: 200px;
+    }
+    .acc-op{
+    width: 100%;
+    }
+    .acc-del{
+    min-width: 380%;
+    color: #000;
+    }
+}

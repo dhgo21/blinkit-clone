@@ -218,3 +218,11 @@
     color: rgb(95, 95, 95);
     font-weight: bold;
 }
+
+
+@media (min-width:340px) and (max-width:600px)
+{
+   .checkout{
+    width: 270%;
+    }
+}
