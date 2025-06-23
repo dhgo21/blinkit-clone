@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/8287ea88-2c28-4806-83b4-efea7baf0bdb)
+<img src="https://github.com/user-attachments/assets/8287ea88-2c28-4806-83b4-efea7baf0bdb" width="100" />
+
 
 # Blinkit Clone Web-App
 
